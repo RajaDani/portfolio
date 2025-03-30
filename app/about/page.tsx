@@ -119,16 +119,16 @@ const About = () => {
                     <div>
                         <p className="text-gray-500 mb-4">Connect with me:</p>
                         <div className="flex gap-6">
-                            <a href="#" className="text-gray-600 hover:text-purple-600 text-xl">
+                            <a target='_blank' href="https://github.com/RajaDani/" className="text-gray-600 hover:text-purple-600 text-xl">
                                 <GithubOutlined />
                             </a>
                             <a href="#" className="text-gray-600 hover:text-purple-600 text-xl">
                                 <TwitterOutlined />
                             </a>
-                            <a href="#" className="text-gray-600 hover:text-purple-600 text-xl">
+                            <a target='_blank' href="https://www.linkedin.com/in/danish-imran/" className="text-gray-600 hover:text-purple-600 text-xl">
                                 <LinkedinOutlined />
                             </a>
-                            <a href="#" className="text-gray-600 hover:text-purple-600 text-xl">
+                            <a target='_blank' href="mailto:danishimran889@gmail.com" className="text-gray-600 hover:text-purple-600 text-xl">
                                 <MailOutlined />
                             </a>
                         </div>

@@ -5,7 +5,7 @@ import AOS from "aos";
 
 import { useEffect, useState } from "react"
 import { Input, Button } from "antd"
-import { SendOutlined, GithubOutlined, TwitterOutlined, FacebookOutlined, MailOutlined, HeartFilled } from "@ant-design/icons"
+import { SendOutlined, GithubOutlined, TwitterOutlined, LinkedinOutlined, MailOutlined, HeartFilled } from "@ant-design/icons"
 import Link from "next/link"
 
 const { TextArea } = Input
@@ -131,16 +131,16 @@ export default function Footer() {
                             </p>
 
                             <div className="flex space-x-4 mb-8 justify-center">
-                                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                                <Link target='_blank' href="https://github.com/RajaDani/" className="text-gray-600 hover:text-gray-900">
                                     <GithubOutlined className="text-xl" />
                                 </Link>
                                 <Link href="#" className="text-gray-600 hover:text-gray-900">
                                     <TwitterOutlined className="text-xl" />
                                 </Link>
-                                <Link href="#" className="text-gray-600 hover:text-gray-900">
-                                    <FacebookOutlined className="text-xl" />
+                                <Link target='_blank' href="https://www.linkedin.com/in/danish-imran/" className="text-gray-600 hover:text-gray-900">
+                                    <LinkedinOutlined className="text-xl" />
                                 </Link>
-                                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                                <Link target='_blank' href="mailto:danishimran889@gmail.com" className="text-gray-600 hover:text-gray-900">
                                     <MailOutlined className="text-xl" />
                                 </Link>
                             </div>
