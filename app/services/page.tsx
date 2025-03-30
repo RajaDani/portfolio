@@ -3,8 +3,11 @@
 import { CodeOutlined, DatabaseOutlined, AppstoreOutlined, GlobalOutlined, MobileOutlined } from '@ant-design/icons';
 import AOS from "aos";
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation'
+import { Tag } from 'antd';
 
 const Services = () => {
+    const pathname = usePathname();
 
     useEffect(() => {
         AOS.init({
@@ -75,9 +78,13 @@ const Services = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8" data-aos="zoom-in">
+        <div style={{ marginTop: pathname === '/services' ? '80px' : '0px' }} className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8" data-aos="zoom-in">
             <div className="text-center mb-16">
-                <h2 className="text-sm text-purple-600 font-semibold tracking-wide uppercase">My Expertise</h2>
+                <div className="flex justify-center mb-2">
+                    <Tag bordered={false} className="!bg-purple-100 !text-purple-500  !rounded-full !px-4 !py-1 !font-medium">
+                        My Expertise
+                    </Tag>
+                </div>
                 <div className="relative flex items-center mb-10">
                     <div className="flex-grow h-px bg-gray-700 ml-14"></div>
                     <h1 className="mt-2 text-4xl font-bold text-gray-900 sm:text-5xl ml-8 mr-8">Skills & Services</h1>

@@ -1,8 +1,9 @@
 'use client';
 
-import { Button } from 'antd';
+import { Button, Tag } from 'antd';
 import AOS from "aos";
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation'
 
 interface Project {
     title: string;
@@ -44,6 +45,7 @@ const projects: Project[] = [
 ];
 
 const FeaturedProjects = () => {
+    const pathname = usePathname();
 
     useEffect(() => {
         AOS.init({
@@ -54,8 +56,12 @@ const FeaturedProjects = () => {
 
 
     return (
-        <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 mt-20" data-aos="zoom-in-up">
-            <h2 className="text-sm text-purple-600 font-semibold tracking-wide uppercase text-center">My Work</h2>
+        <div style={{ marginTop: pathname === '/projects' ? '80px' : '0px' }} className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 mt-20" data-aos="zoom-in-up">
+            <div className="flex justify-center mb-2">
+                <Tag bordered={false} className="!bg-purple-100 !text-purple-500  !rounded-full !px-4 !py-1 !font-medium">
+                    My Work
+                </Tag>
+            </div>
             <div className="relative flex items-center mb-10">
                 <div className="flex-grow h-px bg-gray-700 ml-14"></div>
                 <h1 className="mt-2 text-4xl font-bold text-gray-900 sm:text-5xl ml-8 mr-8">Featured Projects</h1>

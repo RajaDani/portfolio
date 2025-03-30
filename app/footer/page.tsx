@@ -10,7 +10,7 @@ import Link from "next/link"
 
 const { TextArea } = Input
 
-export default function Contact() {
+export default function Footer() {
 
     useEffect(() => {
         AOS.init({

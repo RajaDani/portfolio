@@ -55,7 +55,8 @@ export default function Navbar() {
             <Button
               type="primary"
               icon={<PhoneOutlined />}
-              className="bg-purple-600 hover:bg-purple-700"
+              style={{ background: "linear-gradient(90deg, rgba(189,99,231,1) 32%, rgba(73,49,227,1) 100%)" }}
+              className="hover:bg-purple-700"
             >
               Request a call
             </Button>

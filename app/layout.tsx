@@ -4,6 +4,7 @@ import { AntdRegistry } from '@ant-design/nextjs-registry';
 import "aos/dist/aos.css";
 import { Roboto } from 'next/font/google'
 import Navbar from "./home/Navbar";
+import Footer from "./footer/page";
 
 const roboto = Roboto({
   weight: '400',
@@ -25,9 +26,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${roboto.className} antialiased overflow-x-hidden`}
+        style={{ backgroundColor: "oklch(.985 .002 247.839)" }}
       >
         <Navbar />
         <AntdRegistry>{children}</AntdRegistry>
+        <Footer />
       </body>
     </html>
   );

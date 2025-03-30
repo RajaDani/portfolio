@@ -1,13 +1,15 @@
 "use client"
 import { Typography, Row, Col, Card } from "antd"
 import Image from "next/image"
-import { CodeOutlined, DatabaseOutlined, CloudServerOutlined, GithubOutlined } from "@ant-design/icons"
 import { useEffect } from "react"
 import AOS from "aos";
+import { usePathname } from 'next/navigation'
+import { Tag } from "antd";
 
 const { Title, Paragraph } = Typography
 
 export default function Skills() {
+    const pathname = usePathname();
 
     useEffect(() => {
         AOS.init({
@@ -131,8 +133,15 @@ export default function Skills() {
     ]
 
     return (
-        <div className="bg-gray-50 pt-20" data-aos="flip-up">
-            <h2 className="text-sm text-purple-600 font-semibold tracking-wide uppercase text-center">My Skillset</h2>
+        <div
+            style={{ marginTop: pathname === '/skills' ? '80px' : '0px', marginBottom: pathname === '/skills' ? '100px' : '50px' }}
+            className="bg-gray-50 pt-20" data-aos="flip-up">
+            <div className="flex justify-center">
+                <Tag bordered={false} className="!bg-purple-100 !text-purple-500  !rounded-full !px-4 !py-1 !font-medium">
+                    My Skillset
+                </Tag>
+            </div>
+            {/* <h2 className="text-sm text-purple-600 font-semibold tracking-wide uppercase text-center">My Skillset</h2> */}
             <div className="relative flex items-center mb-20 pl-14">
                 <div className="flex-grow h-px bg-gray-700 ml-14"></div>
                 <Title level={1} className="text-2xl font-bold mt-4 ml-8 mr-8" >Technologies and Tools </Title>

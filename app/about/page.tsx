@@ -1,6 +1,6 @@
 'use client';
 
-import { GithubOutlined, TwitterOutlined, LinkedinOutlined, MailOutlined } from '@ant-design/icons';
+import { GithubOutlined, TwitterOutlined, LinkedinOutlined, MailOutlined, ExportOutlined, RightOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 import { useEffect, useState } from 'react';
 import AOS from "aos";
@@ -80,7 +80,7 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-purple-500 rounded-full px-4 py-2 shadow-lg z-10">
+                        <div style={{ background: "linear-gradient(90deg, rgba(189,99,231,1) 32%, rgba(73,49,227,1) 100%)" }} className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full px-4 py-2 shadow-lg z-10">
                             <span className="flex items-center gap-2">
                                 <span className="w-2 h-2 bg-green-500 rounded-full"></span>
                                 <span className="text-sm text-white">Available</span>
@@ -110,10 +110,10 @@ const About = () => {
                     </p>
 
                     <div className="flex gap-4 mb-8">
-                        <Button type="primary" className="bg-purple-600 hover:bg-purple-700">
+                        <Button icon={<ExportOutlined />} iconPosition='end' type="primary" style={{ background: "linear-gradient(90deg, rgba(189,99,231,1) 32%, rgba(73,49,227,1) 100%)" }} >
                             More About Me
                         </Button>
-                        <Button>Download Resume</Button>
+                        <Button icon={<RightOutlined />} iconPosition='end'>Download Resume</Button>
                     </div>
 
                     <div>
