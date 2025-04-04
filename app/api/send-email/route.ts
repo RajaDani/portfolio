@@ -6,12 +6,6 @@ export async function POST(req: NextRequest) {
         const body = await req.json();
         const { name, email, subject, message } = body;
 
-        // Initialize emailjs only once (if using "@emailjs/browser")
-        // if (!emailjs.init.isInitialized()) {
-        //   emailjs.init(process.env.EMAILJS_PUBLIC_KEY ?? "");
-        // }
-
-        // Use "@emailjs/nodejs" on the server side
         emailjs.send(
             process.env.EMAILJS_SERVICE_ID ?? "",
             process.env.EMAILJS_TEMPLATE_ID ?? "",
@@ -25,7 +19,14 @@ export async function POST(req: NextRequest) {
                 publicKey: process.env.EMAILJS_PUBLIC_KEY,
                 privateKey: process.env.EMAILJS_PRIVATE_KEY
             }
-        );
+        ).then(
+            (response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            },
+            (err) => {
+                console.log('FAILED...', err);
+            },
+        )
 
         return NextResponse.json({ message: "Email sent successfully" }, { status: 200 });
     } catch (error) {
