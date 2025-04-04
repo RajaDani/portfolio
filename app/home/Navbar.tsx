@@ -57,8 +57,9 @@ export default function Navbar() {
               icon={<PhoneOutlined />}
               style={{ background: "linear-gradient(90deg, rgba(189,99,231,1) 32%, rgba(73,49,227,1) 100%)" }}
               className="hover:bg-purple-700"
+              onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}
             >
-              Request a call
+              Contact Me
             </Button>
             {/* Mobile menu button */}
             {/* <Button
@@ -92,7 +93,7 @@ export default function Navbar() {
               icon={<PhoneOutlined />}
               className="w-full bg-purple-600 hover:bg-purple-700"
             >
-              Request a call
+              Contact Me
             </Button>
           </div>
         )}

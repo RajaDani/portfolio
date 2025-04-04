@@ -5,6 +5,7 @@ import About from '../about/page'
 import Skills from '../skills/page'
 import FeaturedProjects from '../projects/page'
 import Services from '../services/page'
+import ScrollToTop from '../ScrollToTop'
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
             <Services />
             <Skills />
             <FeaturedProjects />
+            <ScrollToTop />
         </div>
     )
 }

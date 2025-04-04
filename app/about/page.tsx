@@ -21,6 +21,16 @@ const About = () => {
         });
     }, []);
 
+    const handleDownload = () => {
+        const fileUrl = "/resume/Danish_Resume.pdf"; // File path from the public folder
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        link.setAttribute("download", "Danish_Resume.pdf"); // Suggested file name
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     useEffect(() => {
         const currentWord = texts[index];
         let timer: NodeJS.Timeout;
@@ -110,10 +120,10 @@ const About = () => {
                     </p>
 
                     <div className="flex gap-4 mb-8">
-                        <Button icon={<ExportOutlined />} iconPosition='end' type="primary" style={{ background: "linear-gradient(90deg, rgba(189,99,231,1) 32%, rgba(73,49,227,1) 100%)" }} >
-                            More About Me
+                        <Button icon={<ExportOutlined />} onClick={handleDownload} iconPosition='end' type="primary" style={{ background: "linear-gradient(90deg, rgba(189,99,231,1) 32%, rgba(73,49,227,1) 100%)" }} >
+                            Download Resume
                         </Button>
-                        <Button icon={<RightOutlined />} iconPosition='end'>Download Resume</Button>
+                        {/* <Button icon={<RightOutlined />} onClick={handleDownload} iconPosition='end'>Download Resume</Button> */}
                     </div>
 
                     <div>
