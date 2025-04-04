@@ -22,9 +22,11 @@ export async function POST(req: NextRequest) {
         ).then(
             (response) => {
                 console.log('SUCCESS!', response.status, response.text);
+                return NextResponse.json({ message: response.status + response.text }, { status: 200 });
             },
             (err) => {
                 console.log('FAILED...', err);
+                return NextResponse.json({ message: err }, { status: 500 });
             },
         )
 
