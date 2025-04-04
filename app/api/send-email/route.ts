@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
         const body = await req.json();
         const { name, email, subject, message } = body;
 
-        emailjs.send(
+        const msg = emailjs.send(
             process.env.EMAILJS_SERVICE_ID ?? "",
             process.env.EMAILJS_TEMPLATE_ID ?? "",
             {
@@ -22,17 +22,19 @@ export async function POST(req: NextRequest) {
         ).then(
             (response) => {
                 console.log('SUCCESS!', response.status, response.text);
-                return NextResponse.json({ message: response.status + response.text }, { status: 200 });
+                return response.status + response.text
+                // return NextResponse.json({ message: response.status + response.text }, { status: 200 });
             },
             (err) => {
                 console.log('FAILED...', err);
-                return NextResponse.json({ message: err }, { status: 500 });
+                return err;
+                // return NextResponse.json({ message: err }, { status: 500 });
             },
         )
 
-        // return NextResponse.json({ message: "Email sent successfully" }, { status: 200 });
+        return NextResponse.json({ message: msg }, { status: 200 });
     } catch (error) {
         console.error("Error sending email:", error);
-        // return NextResponse.json({ message: "Failed to send email" }, { status: 500 });
+        return NextResponse.json({ message: msg }, { status: 500 });
     }
 }
