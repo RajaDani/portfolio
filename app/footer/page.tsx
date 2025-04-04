@@ -29,27 +29,34 @@ export default function Footer() {
         });
     }, []);
 
-    const sendEmail = (e: any) => {
+    const sendEmail = async (e: any) => {
         e.preventDefault();
         setEmailLoader(true)
-        emailjs
-            .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID ?? "", process.env.NEXT_PUBLIC_TEMPLATE_ID ?? "", form.current, {
-                publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY ?? "",
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    setEmailResponse("success")
-                    setIsModalOpen(true)
-                    setEmailLoader(false)
+        try {
+            const formData = new FormData(form.current);
+            const data = Object.fromEntries(formData.entries());
+
+            const response = await fetch("/api/send-email", { // Make a POST request to your API route
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
                 },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                    setEmailLoader(false)
-                    setIsModalOpen(true)
-                    setEmailResponse("failed")
-                },
-            );
+                body: JSON.stringify(data),
+            });
+            if (response.ok) {
+                console.log("SUCCESS!");
+                setEmailResponse("success");
+            } else {
+                console.error("FAILED...", response.statusText);
+                setEmailResponse("failed");
+            }
+        } catch (error) {
+            console.error("FAILED...", error);
+            setEmailResponse("failed");
+        } finally {
+            setIsModalOpen(true);
+            setEmailLoader(false);
+        }
     };
 
     return (
