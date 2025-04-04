@@ -7,7 +7,6 @@ import { useEffect, useRef, useState } from "react"
 import { Input, Button, Result, Modal } from "antd"
 import { SendOutlined, GithubOutlined, TwitterOutlined, LinkedinOutlined, MailOutlined, HeartFilled } from "@ant-design/icons"
 import Link from "next/link"
-import emailjs from '@emailjs/browser';
 
 const { TextArea } = Input
 
