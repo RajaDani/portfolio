@@ -108,7 +108,7 @@ const FeaturedProjects = () => {
                                     ))}
                                 </div>
 
-                                <Button type="link" href={project.link} className="text-purple-600 hover:text-purple-700 p-0">
+                                <Button type="link" target='_blank' href={project.link} className="text-purple-600 hover:text-purple-700 p-0">
                                     {project.title !== "AR Home Services - Mobile App" ? "Visit the Website... →" : "Visit on Google Play... →"}
                                 </Button>
                             </div>
