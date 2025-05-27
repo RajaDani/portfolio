@@ -40,7 +40,7 @@ const projects: Project[] = [
         description: 'The Home Services mobile app provides a seamless way to access food delivery, groceries, and household services. Built with React Native, it ensures a smooth and responsive experience across devices, backed by a Fastify-powered Node.js backend for real-time updates and reliability.',
         image: '/projects/armobile.jpg',
         technologies: ['react native', 'typescript', 'tailwindcss', 'mysql', 'nodejs', 'fastify', 'material-ui', 'redux'],
-        link: 'https://admin-apnabike.vercel.app/'
+        link: 'https://play.google.com/store/apps/details?id=ar.free.srvices&hl=en'
     }
 ];
 
@@ -109,7 +109,7 @@ const FeaturedProjects = () => {
                                 </div>
 
                                 <Button type="link" href={project.link} className="text-purple-600 hover:text-purple-700 p-0">
-                                    Visit the Website... →
+                                    {project.title !== "AR Home Services - Mobile App" ? "Visit the Website... →" : "Visit on Google Play... →"}
                                 </Button>
                             </div>
                         </div>
