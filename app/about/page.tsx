@@ -109,7 +109,7 @@ const About = () => {
                         Hello, I am <span className="bg-gradient-to-r from-purple-600 via-purple-500 to-purple-400 bg-clip-text text-transparent">Danish</span>
                     </h1>
                     <p className="text-gray-600 text-lg mb-6">
-                        I am a passionate and results-driven <span className="text-purple-600 hover:underline"> MERN Stack </span> Developer, harnessing 3 years of professional expertise to elevate digital experiences.
+                        I am a passionate and results-driven <span className="text-purple-600 hover:underline"> MERN Stack </span> Developer, harnessing 3+ years of professional expertise to elevate digital experiences.
                         My journey unfolds with a mastery of <span className="text-purple-600 hover:underline"> React</span>, intricately weaving engaging interfaces,
                         and extends to <span className="text-yellow-500 hover:underline">  Node.js, Express, and Fastify </span> for crafting robust backend solutions.
                         Navigating through databases, I seamlessly orchestrate with <span className="text-purple-600 hover:underline"> MySQL </span>and <span className="text-blue-500 hover:underline">PostgreSQL </span>,
