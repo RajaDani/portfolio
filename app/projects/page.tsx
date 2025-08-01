@@ -103,6 +103,14 @@ const projects: Project[] = [
         link: "https://smart-sense.eagle-iot.com/",
     },
     {
+        title: "Driver App - EagleIoT",
+        description:
+            "Eagle-Iot Driver-App is designed to help drivers efficiently manage their assigned assets, routes, and daily tasks. Stay updated with real-time notifications, track trip progress, and access essential account settings—all in one app!",
+        image: "/projects/driverapp.jpg",
+        technologies: ["react native", "typescript", "css", "postgresql", "nodejs", "redux-toolkit"],
+        link: "https://play.google.com/store/apps/details?id=com.rmsdriverapp&hl=en",
+    },
+    {
         title: "Eagle-IoT Mobile App (Android, IOS)",
         description:
             "Eagle-IoT is an all-in-one platform for vehicle tracking, video telematics, fleet, and asset management, designed to streamline operations with real-time monitoring and advanced analytics. Built with React.js and Redux for a dynamic frontend, Node.js with Fastify for a high-performance backend, and powered by Redis and Kafka for seamless data processing and communication.",
@@ -202,7 +210,7 @@ const FeaturedProjects = () => {
                                     href={project.link}
                                     className="text-purple-600 hover:text-purple-700 p-0"
                                 >
-                                    {!project.title.includes("Mobile App") ? "Visit the Website... →" : "Visit on Google Play... →"}
+                                    {!project.title.includes("Mobile App") || project.title.includes("Driver App") ? "Visit the Website... →" : "Visit on Google Play... →"}
                                 </Button>
                             </div>
                         </div>
