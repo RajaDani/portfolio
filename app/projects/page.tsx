@@ -148,7 +148,7 @@ const FeaturedProjects = () => {
             data-aos="zoom-in-up"
         >
             <div className="flex justify-center mb-2">
-                <Tag bordered={false} className="!bg-purple-100 !text-purple-500  !rounded-full !px-4 !py-1 !font-medium">
+                <Tag bordered={false} className="!bg-purple-100 !text-purple-700  !rounded-full !px-4 !py-1 !font-medium">
                     My Work
                 </Tag>
             </div>
@@ -208,7 +208,7 @@ const FeaturedProjects = () => {
                                     type="link"
                                     target="_blank"
                                     href={project.link}
-                                    className="text-purple-600 hover:text-purple-700 p-0"
+                                    className="text-purple-700 hover:text-purple-800 p-0"
                                 >
                                     {!project.title.includes("Mobile App") || project.title.includes("Driver App") ? "Visit the Website... →" : "Visit on Google Play... →"}
                                 </Button>

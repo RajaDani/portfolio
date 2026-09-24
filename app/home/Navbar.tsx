@@ -27,12 +27,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-sm  border-b-1 shadow-lg border-purple-600">
+      <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm border-b border-purple-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-purple-700 to-fuchsia-600 bg-clip-text text-transparent">
                 Danish Imran
               </span>
             </Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex items-center space-x-1 text-md font-medium text-gray-700 hover:text-purple-600 transition-colors"
+                  className="flex items-center space-x-1 text-md font-medium text-gray-800 hover:text-purple-700 transition-colors"
                 >
                   {item.icon}
                   <span className="ml-1">{item.label}</span>
@@ -79,7 +79,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                  className="flex items-center space-x-2 text-gray-800 hover:text-purple-700 px-3 py-2 rounded-md text-base font-medium transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.icon}

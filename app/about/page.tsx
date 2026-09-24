@@ -80,12 +80,11 @@ const About = () => {
 
                         {/* Second Box - Front */}
                         <div className="absolute inset-0 bg-white rounded-3xl transform -rotate-6 transition-transform duration-300 group-hover:rotate-0">
-                            <div className="absolute inset-0 bg-blue-600 rounded-3xl overflow-hidden border-4 border-white shadow-2xl transition-transform duration-300 hover:scale-105">
+                            <div className="absolute inset-0 bg-purple-100 rounded-3xl overflow-hidden border-4 border-white shadow-2xl transition-transform duration-300 hover:scale-105">
                                 <img
-                                    // src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                                    src="https://aakash-sharma.netlify.app/static/media/webdev.4d72dbba32efee3890cef9bcacce7aa7.svg"
+                                    src="/profile.jpeg"
                                     alt="Profile"
-                                    className="w-full h-full object-cover bg-white"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
                         </div>
@@ -105,17 +104,17 @@ const About = () => {
                         {currentText}
                         <span className="animate-blink">|</span>
                     </div>
-                    <h1 className="text-5xl font-bold mb-4">
-                        Hello, I am <span className="bg-gradient-to-r from-purple-600 via-purple-500 to-purple-400 bg-clip-text text-transparent">Danish</span>
+                    <h1 className="text-5xl font-bold mb-4 text-gray-900">
+                        Hello, I am <span className="bg-gradient-to-r from-purple-700 via-purple-600 to-fuchsia-500 bg-clip-text text-transparent">Danish</span>
                     </h1>
                     <p className="text-gray-600 text-lg mb-6">
-                        I am a passionate and results-driven <span className="text-purple-600 hover:underline"> MERN Stack </span> Developer, harnessing 3+ years of professional expertise to elevate digital experiences.
-                        My journey unfolds with a mastery of <span className="text-purple-600 hover:underline"> React</span>, intricately weaving engaging interfaces,
-                        and extends to <span className="text-yellow-500 hover:underline">  Node.js, Express, and Fastify </span> for crafting robust backend solutions.
-                        Navigating through databases, I seamlessly orchestrate with <span className="text-purple-600 hover:underline"> MySQL </span>and <span className="text-blue-500 hover:underline">PostgreSQL </span>,
-                        ensuring data integrity and performance. Venturing into the realm of <span className="text-green-600 hover:underline"> Microservices </span>
-                        architecture, I optimize scalability and efficiency through the adept use of <span className="text-orange-600 hover:underline"> Kafka </span> and <span className="text-purple-600 hover:underline">Redis</span>. As a Docker enthusiast,
-                        I orchestrate deployments with finesse, guaranteeing optimal application <span className='text-pink-600'>performance.</span>
+                        I am a passionate and results-driven <span className="text-purple-700 hover:underline"> MERN Stack </span> Developer, harnessing 3+ years of professional expertise to elevate digital experiences.
+                        My journey unfolds with a mastery of <span className="text-purple-700 hover:underline"> React</span>, intricately weaving engaging interfaces,
+                        and extends to <span className="text-amber-700 hover:underline">  Node.js, Express, and Fastify </span> for crafting robust backend solutions.
+                        Navigating through databases, I seamlessly orchestrate with <span className="text-purple-700 hover:underline"> MySQL </span>and <span className="text-blue-700 hover:underline">PostgreSQL </span>,
+                        ensuring data integrity and performance. Venturing into the realm of <span className="text-green-700 hover:underline"> Microservices </span>
+                        architecture, I optimize scalability and efficiency through the adept use of <span className="text-orange-700 hover:underline"> Kafka </span> and <span className="text-purple-700 hover:underline">Redis</span>. As a Docker enthusiast,
+                        I orchestrate deployments with finesse, guaranteeing optimal application <span className="text-fuchsia-700">performance.</span>
 
                     </p>
 
@@ -129,16 +128,16 @@ const About = () => {
                     <div>
                         <p className="text-gray-500 mb-4">Connect with me:</p>
                         <div className="flex gap-6">
-                            <a target='_blank' href="https://github.com/RajaDani/" className="text-gray-600 hover:text-purple-600 text-xl">
+                            <a target='_blank' href="https://github.com/RajaDani/" className="text-gray-700 hover:text-purple-700 text-xl">
                                 <GithubOutlined />
                             </a>
-                            <a href="#" className="text-gray-600 hover:text-purple-600 text-xl">
+                            <a href="#" className="text-gray-700 hover:text-purple-700 text-xl">
                                 <TwitterOutlined />
                             </a>
-                            <a target='_blank' href="https://www.linkedin.com/in/danish-imran/" className="text-gray-600 hover:text-purple-600 text-xl">
+                            <a target='_blank' href="https://www.linkedin.com/in/danish-imran/" className="text-gray-700 hover:text-purple-700 text-xl">
                                 <LinkedinOutlined />
                             </a>
-                            <a target='_blank' href="mailto:danishimran889@gmail.com" className="text-gray-600 hover:text-purple-600 text-xl">
+                            <a target='_blank' href="mailto:danishimran889@gmail.com" className="text-gray-700 hover:text-purple-700 text-xl">
                                 <MailOutlined />
                             </a>
                         </div>

@@ -25,8 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} antialiased overflow-x-hidden`}
-        style={{ backgroundColor: "oklch(.985 .002 247.839)" }}
+        className={`${roboto.className} antialiased overflow-x-hidden bg-gray-50 text-gray-900`}
       >
         <Navbar />
         <AntdRegistry>{children}</AntdRegistry>

@@ -81,7 +81,7 @@ const Services = () => {
         <div style={{ marginTop: pathname === '/services' ? '80px' : '0px' }} className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8" data-aos="zoom-in">
             <div className="text-center mb-16">
                 <div className="flex justify-center mb-2">
-                    <Tag bordered={false} className="!bg-purple-100 !text-purple-500  !rounded-full !px-4 !py-1 !font-medium">
+                    <Tag bordered={false} className="!bg-purple-100 !text-purple-700  !rounded-full !px-4 !py-1 !font-medium">
                         My Expertise
                     </Tag>
                 </div>

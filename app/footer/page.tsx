@@ -88,7 +88,7 @@ export default function Footer() {
                                     id="subject"
                                     name="subject"
                                     placeholder="Subject"
-                                    className="w-full rounded-md bg-gray-700"
+                                    className="w-full rounded-md"
                                     style={{ background: "#e8e8e8", padding: 10 }}
                                 />
                             </div>
